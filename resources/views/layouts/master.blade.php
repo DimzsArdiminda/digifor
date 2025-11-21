@@ -51,11 +51,15 @@
 			<nav id="navmenu" class="navmenu">
 				<ul>
 					<li><a href="#home" class="active">Home</a></li>
-					<li><a href="#">Statistik Kasus</a></li>
-					<form action="{{ route('auth.logout') }}" method="POST" >
-						@csrf
-						<button type="submit" class="btn btn-link">Logout</button>
-					</form>
+					<li><a href="#">Data Korban</a></li>
+					<li><a href="#">Kasus</a></li>
+					<li><a href="#">Tindakan</a></li>
+					<li>
+						<form action="{{ route('auth.logout') }}" method="POST" style="margin: 0;">
+							@csrf
+							<button type="submit" class="btn btn-link text-decoration-none p-0" style="color: inherit;">Logout</button>
+						</form>
+					</li>
 				</ul>
 				<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 			</nav>

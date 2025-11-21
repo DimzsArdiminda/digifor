@@ -3,11 +3,10 @@
 <!-- PROJECT LOGO -->
 <br />
 Feature:
--   Home <br>
--   About <br>
--   Statistik <br>
--   Fitur Utama <br>
--   Contact <br>
+- Home
+- Data Korban <br>
+- Kasus <br>
+- Tindakan <br>
 
 ### Built With
 
@@ -33,7 +32,7 @@ To get a local copy up and running SIBATIK follow these steps.
 ### Installation
 1. Clone Project repo
     ```sh
-    (https://github.com/adeliakhansa/educational-informatic.git)
+    (https://github.com/DimzsArdiminda/digifor.git)
     ```
 2. Go to project directory
     ```sh
@@ -50,7 +49,6 @@ To get a local copy up and running SIBATIK follow these steps.
 5. Copy `.env.example`
     ```sh
     cp .env.example .env
-    ```
     ```
 6. Run to generate key
     ```sh

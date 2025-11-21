@@ -10,3 +10,4 @@ route::get('/auth-google-callback', [AuthController::class, 'googleCallback'])->
 route::prefix('/auth')->name('auth.')->group(function () {
     route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
+
