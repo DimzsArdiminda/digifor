@@ -55,7 +55,7 @@
 </section>      
 
     <!-- Statistics Section -->
-    <section class="py-5 bg-light" id="statistics">
+    <section class="py-5" id="statistics">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
         <h2 class="fw-bold">Campus Achievements</h2>
@@ -97,7 +97,7 @@
 
     {{-- ABOUT SECTION --}}
 
-    <section class="who-we-are-section py-5" id="about">
+    <section class="who-we-are-section py-5 bg-light" id="about">
     <div class="container">
         <div class="row align-items-center">
             <!-- Text content -->
@@ -128,197 +128,9 @@
     </div>
 </section>
 
-{{-- FITUR --}}
-<!-- Main Features Section -->
-<section class="py-5 bg-white" id="features">
-    <div class="container text-center">
-        <div class="section-header" data-aos="fade-up">
-            <h2 class="fw-bold mb-3">Fitur Alumni Tracer</h2>
-            <p class="text-muted mb-5">
-                Sistem terintegrasi untuk memantau perkembangan karir alumni dan meningkatkan kualitas pendidikan
-            </p>
-        </div>
-
-        <div class="row g-4 justify-content-center">
-            <!-- Data Alumni -->
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in">
-                <a href=""></a>
-                <div class="feature-card p-4 rounded-4 shadow-sm h-100" onclick="handleFeatureClick('data-alumni')">
-                    <div class="shine"></div>
-                    <div class="feature-icon ">
-                        <i class="bi bi-people"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h5>Data Alumni</h5>
-                        <p>Pendataan Alumni bagi lulusan baru Universitas Negeri Malang</p>
-                        <span class="feature-badge">Jelajahi <i class="bi bi-arrow-right ms-1"></i></span>
-                    </div>
-                    <div class="click-indicator">
-                        <i class="bi bi-cursor"></i>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Employment Tracking -->
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-                <div class="feature-card p-4 rounded-4 shadow-sm h-100" onclick="handleFeatureClick('employment')">
-                    <div class="shine"></div>
-                    <div class="feature-icon floating" style="animation-delay: 0.5s;">
-                        <i class="bi bi-briefcase"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h5>Status Pekerjaan</h5>
-                        <p>Monitoring status ketenagakerjaan dan perkembangan karir alumni.</p>
-                        <span class="feature-badge">Lihat Detail <i class="bi bi-arrow-right ms-1"></i></span>
-                    </div>
-                    <div class="click-indicator">
-                        <i class="bi bi-cursor"></i>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Analytics -->
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="feature-card p-4 rounded-4 shadow-sm h-100" onclick="handleFeatureClick('analytics')">
-                    <div class="shine"></div>
-                    <div class="feature-icon floating" style="animation-delay: 1s;">
-                        <i class="bi bi-bar-chart-line"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h5>Analisis & Statistik</h5>
-                        <p>Dashboard interaktif dengan visualisasi data dan insights mendalam.</p>
-                        <span class="feature-badge">Buka Dashboard <i class="bi bi-arrow-right ms-1"></i></span>
-                    </div>
-                    <div class="click-indicator">
-                        <i class="bi bi-cursor"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row g-4 justify-content-center mt-2">
-            <!-- Survey & Feedback -->
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-                <div class="feature-card p-4 rounded-4 shadow-sm h-100" onclick="handleFeatureClick('survey')">
-                    <div class="shine"></div>
-                    <div class="feature-icon floating" style="animation-delay: 1.5s;">
-                        <i class="bi bi-clipboard-data"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h5>Survey & Feedback</h5>
-                        <p>Kuesioner online untuk evaluasi program studi dan kompetensi lulusan.</p>
-                        <span class="feature-badge">Isi Survey <i class="bi bi-arrow-right ms-1"></i></span>
-                    </div>
-                    <div class="click-indicator">
-                        <i class="bi bi-cursor"></i>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Data Security -->
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="400">
-                <div class="feature-card p-4 rounded-4 shadow-sm h-100" onclick="handleFeatureClick('security')">
-                    <div class="shine"></div>
-                    <div class="feature-icon floating" style="animation-delay: 2s;">
-                        <i class="bi bi-shield-lock"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h5>Keamanan Data</h5>
-                        <p>Sistem terenkripsi untuk melindungi privasi data alumni.</p>
-                        <span class="feature-badge">Pelajari Lebih <i class="bi bi-arrow-right ms-1"></i></span>
-                    </div>
-                    <div class="click-indicator">
-                        <i class="bi bi-cursor"></i>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Reporting -->
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="500">
-                <div class="feature-card p-4 rounded-4 shadow-sm h-100" onclick="handleFeatureClick('reporting')">
-                    <div class="shine"></div>
-                    <div class="feature-icon floating" style="animation-delay: 2.5s;">
-                        <i class="bi bi-file-earmark-text"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h5>Export & Laporan</h5>
-                        <p>Generate laporan tracer study dalam format PDF dan Excel.</p>
-                        <span class="feature-badge">Download <i class="bi bi-arrow-right ms-1"></i></span>
-                    </div>
-                    <div class="click-indicator">
-                        <i class="bi bi-cursor"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- LOGO --}}
-<!-- Clients Section -->
-<section id="fakultas" class="clients section py-5">
-  <div class="container text-center" data-aos="fade-up">
-    <div class="section-header mb-4">
-      <span class="badge bg-light text-primary rounded-pill px-3 py-1"></span>
-      <h2 class="fw-bold text-dark mt-3">Faculty State University Of Malang</h2>
-    </div>
-
-    <div class="swiper init-swiper">
-      <script type="application/json" class="swiper-config">
-        {
-          "loop": true,
-          "speed": 1500,
-          "autoplay": {
-            "delay": 2000,
-            "disableOnInteraction": false
-          },
-          "slidesPerView": 5,
-          "spaceBetween": 70,
-          "centeredSlides": true,
-          "pagination": {
-            "el": ".swiper-pagination",
-            "type": "bullets",
-            "clickable": true
-          },
-          "breakpoints": {
-            "320": {
-              "slidesPerView": 2,
-              "spaceBetween": 20
-            },
-            "640": {
-              "slidesPerView": 3,
-              "spaceBetween": 30
-            },
-            "992": {
-              "slidesPerView": 5,
-              "spaceBetween": 40
-            }
-          }
-        }
-      </script>
-
-      <div class="swiper-wrapper align-items-center">
-        <div class="swiper-slide"><img src="{{ asset('frontend/image/ft.webp') }}" class="img-fluid" alt="Citrus"></div>
-        <div class="swiper-slide"><img src="{{ asset('frontend/image/feb.jpg') }}" class="img-fluid" alt="Trustly"></div>
-        <div class="swiper-slide"><img src="{{ asset('frontend/image/fip.webp') }}" class="img-fluid" alt="Oldendorff"></div>
-        <div class="swiper-slide"><img src="{{ asset('frontend/image/fk.webp') }}" class="img-fluid" alt="Lilly"></div>
-        <div class="swiper-slide"><img src="{{ asset('frontend/image/FV.webp') }}" class="img-fluid" alt="Myob"></div>
-        <div class="swiper-slide"><img src="{{ asset('frontend/image/fs.webp') }}" class="img-fluid" alt="Belimo"></div>
-        <div class="swiper-slide"><img src="{{ asset('frontend/image/fpsi.webp') }}" class="img-fluid" alt="Belimo"></div>
-        <div class="swiper-slide"><img src="{{ asset('frontend/image/pasca.webp') }}" class="img-fluid" alt="Belimo"></div>
-        <div class="swiper-slide"><img src="{{ asset('frontend/image/fik.png') }}" class="img-fluid" alt="Belimo"></div>
-        <div class="swiper-slide"><img src="{{ asset('frontend/image/fmipa.webp') }}" class="img-fluid" alt="Belimo"></div>
-        <div class="swiper-slide"><img src="{{ asset('frontend/image/fis.webp') }}" class="img-fluid" alt="Belimo"></div>
-      </div>
-      <div class="swiper-pagination mt-4"></div>
-    </div>
-  </div>
-</section>
-
-
 {{-- CONTACT --}}
 <!-- Contact Section -->
-<section class="py-5 bg-light" id="contact">
+<section class="py-5 " id="contact">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
         <h2 class="fw-bold">CONTACT</h2>

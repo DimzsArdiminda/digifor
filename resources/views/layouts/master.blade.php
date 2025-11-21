@@ -51,7 +51,7 @@
 			<nav id="navmenu" class="navmenu">
 				<ul>
 					<li><a href="#home" class="active">Home</a></li>
-					<li><a href="#">Tracer</a></li>
+					<li><a href="#">Statistik Kasus</a></li>
 					<form action="{{ route('auth.logout') }}" method="POST" >
 						@csrf
 						<button type="submit" class="btn btn-link">Logout</button>
@@ -63,25 +63,9 @@
 			<nav id="navmenu" class="navmenu">
 				<ul>
 					<li><a href="#home" class="active">Home</a></li>
-					<li><a href="#statistics">Statistik</a></li>
+					<li><a href="#statistics">Statistik Kasus</a></li>
 					<li><a href="#about">About</a></li>
-					<li><a href="#features">Alumni Tracer</a></li>
 					<li><a href="#contact">Contact</a></li>
-					<li class="dropdown">
-						<a href="#"><span>Informasi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-						<ul>
-							<li><a href="#">Dropdown 1</a></li>
-							<li class="dropdown">
-								<a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-								<ul>
-									<li><a href="#">Deep Dropdown 1</a></li>
-									<li><a href="#">Deep Dropdown 2</a></li>
-									<li><a href="#">Deep Dropdown 3</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Dropdown 2</a></li>
-						</ul>
-					</li>
 					<li><a href="{{ url('/auth/login') }}">Login</a></li>
 				</ul>
 				<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -104,7 +88,7 @@
 
 	<!-- ======= Footer ======= -->
 	<footer id="footer" class="footer mt-5">
-		<div class="footer-newsletter py-5">
+		{{-- <div class="footer-newsletter py-5">
 			<div class="container">
 				<div class="row justify-content-center text-center">
 					<div class="col-lg-8">
@@ -122,10 +106,10 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 
-		<div class="container footer-top py-5">
-			<div class="row gy-4">
+		<div class="container footer-top py-5 ">
+			<div class="row gy-4 bg-teal-500">
 				<div class="col-lg-4 col-md-6 footer-about">
 					<a href="{{ url('/') }}" class="d-flex align-items-center">
 						<span class="sitename">EduCarrer Tracker</span>
