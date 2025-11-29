@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>@yield('title', 'SIMKA')</title>
+	<title>@yield('title')</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 
@@ -28,18 +27,22 @@
   <link href="{{ asset('frontend/css/main.css') }}" rel="stylesheet">
 	<link href="{{ asset('frontend/css/main.css') }}" rel="stylesheet">
 	<link href="{{ asset('frontend/css/responsive.css') }}" rel="stylesheet">
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
-
-	@stack('style')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- @stack('style') -->
 </head>
+<style>
+    /* h2{
+        text: bold;
+    } */
+    .shadow-navbar {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    backdrop-filter: blur(3px);
+    }
+</style>
 
-<body class="@yield('body-class', 'index-page')">
-
-	<!-- ======= Header ======= -->
-	<header id="header" class="header d-flex align-items-center fixed-top">
+<body>
+    <!-- ======= Header ======= -->
+	<header id="header" class="header shadow-navbar d-flex align-items-center fixed-top">
 		<div class="container-fluid container-xl position-relative d-flex align-items-center">
 
 			<a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto">
@@ -47,12 +50,11 @@
 				<h1 class="sitename ms-2"></h1>
 			</a>
 
-			@if (Auth::check())
 			<nav id="navmenu" class="navmenu">
 				<ul>
-					<li><a href="/home" class="active">Home</a></li>
+					<li><a href="#" >Home</a></li>
 					<li><a href="#">Data Korban</a></li>
-					<li><a href="/kasus">Kasus</a></li>
+					<li><a href="/kasus" class="active">Kasus</a></li>
 					<li><a href="#">Tindakan</a></li>
 					<li>
 						<form action="{{ route('auth.logout') }}" method="POST" style="margin: 0;">
@@ -63,34 +65,20 @@
 				</ul>
 				<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 			</nav>
-			@else
-			<nav id="navmenu" class="navmenu">
-				<ul>
-					<li><a href="#home" class="active">Home</a></li>
-					<li><a href="#statistics">Statistik Kasus</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<li><a href="{{ url('/auth/login') }}">Login</a></li>
-				</ul>
-				<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-			</nav>
-			@endif
-
-			{{-- <a class="btn-getstarted flex-md-shrink-0" href="#about">Get Started</a> --}}
 
 		</div>
 	</header>
-	<!-- End Header -->
+	<!-- End Header --> 
 
-	<!-- ======= Main Content ======= -->
-	<main id="main" style="margin-top:90px;">
+    <!-- ======= Main Content ======= -->
+	<main id="main" style="margin-top:100px;">
 
 		@yield('content')
 
 	</main>
 	<!-- End Main Content -->
 
-	<!-- ======= Footer ======= -->
+    <!-- ======= Footer ======= -->
 	<footer id="footer" class="footer mt-5">
 		{{-- <div class="footer-newsletter py-5">
 			<div class="container">
@@ -165,37 +153,11 @@
 	</footer>
 	<!-- End Footer -->
 
-	@stack('scripts')
-
-	<!-- Vendor JS Files -->
-	<script src="{{ asset('frontend/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-	<script src="{{ asset('frontend/vendor/aos/aos.js') }}"></script>
-	<script src="{{ asset('frontend/vendor/glightbox/js/glightbox.min.js') }}"></script>
-	<script src="{{ asset('frontend/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-	<script src="{{ asset('frontend/vendor/swiper/swiper-bundle.min.js') }}"></script>
-	<script src="{{ asset('frontend/vendor/php-email-form/validate.js') }}"></script>
-	<script src="{{ asset('frontend/vendor/purecounter/purecounter_vanilla.js') }}"></script>
-	<script src="{{ asset('frontend/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
-	<script src="{{ asset('frontend/js/main.js') }}"></script>
-
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script>
-		AOS.init({
-			duration: 800,  // durasi animasi (ms)
-			offset: 100,    // jarak dari bawah viewport sebelum mulai animasi
-			once: true,     // animasi hanya sekali saat scroll ke area
-		});
-		</script>
-
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script>
-		AOS.init({
-			duration: 900,   // durasi animasi (ms)
-			offset: 120,     // jarak sebelum animasi aktif
-			easing: 'ease-in-out',
-			once: true,      // hanya animasi sekali
-		});
-		</script>
-
+    {{-- JS Global --}}
+    <script src="{{ asset('js/app.js') }}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0"/>
+    </svg>
 </body>
 </html>
