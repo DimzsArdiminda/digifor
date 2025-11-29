@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
 use App\Http\Controllers\user\AlumniController;
+use App\Http\Controllers\TindakanForensikController;
 
 
 Route::get('/welcome', function () {
@@ -12,11 +13,11 @@ Route::get('/welcome', function () {
     ]);
 })->name('home');
 
-// Route::middleware(['auth', 'verified'])->group(function () {
-//     Route::get('dashboard', function () {
-//         return Inertia::render('dashboard');
-//     })->name('dashboard');
-// });
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('dashboard', function () {
+        return Inertia::render('dashboard');
+    })->name('dashboard');
+});
 
 require __DIR__.'/settings.php';
 
@@ -40,5 +41,7 @@ Route::prefix('/auth')->name('auth')->group(function(){
         return view('layouts.auth.signin');
     });
 });
+
+Route::resource('/tindakan', TindakanForensikController::class);
 
 include "api.php";

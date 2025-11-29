@@ -14,6 +14,7 @@
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com" rel="preconnect">
 	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -53,7 +54,7 @@
 					<li><a href="#home" class="active">Home</a></li>
 					<li><a href="#">Data Korban</a></li>
 					<li><a href="#">Kasus</a></li>
-					<li><a href="#">Tindakan</a></li>
+					<li><a href="/tindakan">Tindakan</a></li>
 					<li>
 						<form action="{{ route('auth.logout') }}" method="POST" style="margin: 0;">
 							@csrf
