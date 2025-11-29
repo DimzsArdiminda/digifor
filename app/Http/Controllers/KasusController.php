@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kasus;
 use App\Models\DataKorban;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class KasusController extends Controller
 {
@@ -38,9 +39,15 @@ class KasusController extends Controller
             'status_kasus' => 'required'
         ]);
 
-        Kasus::create($request->all());
+        Kasus::create([
+            'id' => Str::uuid(),
+            'id_korban' => $request->id_korban,
+            'jenis_kasus' => $request->jenis_kasus,
+            'ringkasan_kasus' => $request->ringkasan_kasus,
+            'status_kasus' => $request->status_kasus
+        ]);
 
-        return redirect('/kasus')->with('success', 'Kasus berhasil ditambah');
+        return redirect()->route('kasus.index')->with('success', 'Kasus berhasil ditambahkan!');
     }
 
     /**

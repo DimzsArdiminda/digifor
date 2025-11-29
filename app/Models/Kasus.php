@@ -15,6 +15,7 @@ class Kasus extends Model
     protected $table = 'kasus';
 
     protected $fillable = [
+        'id',
         'id_korban',
         'jenis_kasus',
         'ringkasan_kasus',

@@ -83,6 +83,7 @@
 
 @endsection
 
+@push('scripts')
 <script>
     const deleteModal = document.getElementById('deleteModal');
 
@@ -92,3 +93,4 @@
         document.getElementById('deleteForm').action = url;
     });
 </script>
+@endpush

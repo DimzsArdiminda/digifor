@@ -41,6 +41,6 @@ Route::prefix('/auth')->name('auth')->group(function(){
         return view('layouts.auth.signin');
     });
 });
-Route::resource('/kasus', KasusController::class);
+Route::resource('kasus', KasusController::class);
 
 include "api.php";
