@@ -41,6 +41,7 @@ Route::prefix('/auth')->name('auth')->group(function(){
         return view('layouts.auth.signin');
     });
 });
-Route::resource('kasus', KasusController::class);
+Route::resource('kasus', KasusController::class)->middleware('CheckMid');
+// Route::resource('kasus', KasusController::class)->middleware('checkmid');
 
 include "api.php";
