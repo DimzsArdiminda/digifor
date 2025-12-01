@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('title', 'Data Kasus')
+@section('kasus', 'active')
 
 @section('content')
 

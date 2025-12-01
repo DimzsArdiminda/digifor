@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('title', 'Tambah Kasus')
+@section('kasus', 'active')
 
 @section('content')
 <div class="container">

@@ -50,10 +50,10 @@
 			@if (Auth::check())
 			<nav id="navmenu" class="navmenu">
 				<ul>
-					<li><a href="/home" class="active">Home</a></li>
-					<li><a href="#">Data Korban</a></li>
-					<li><a href="/kasus">Kasus</a></li>
-					<li><a href="#">Tindakan</a></li>
+					<li><a href="/home" class="@yield('home')">Home</a></li>
+					<li><a href="#" class="@yield('korban')">Data Korban</a></li>
+					<li><a href="/kasus" class="@yield('kasus')">Kasus</a></li>
+					<li><a href="#" class="@yield('tindakan')">Tindakan</a></li>
 					<li>
 						<form action="{{ route('auth.logout') }}" method="POST" style="margin: 0;">
 							@csrf
