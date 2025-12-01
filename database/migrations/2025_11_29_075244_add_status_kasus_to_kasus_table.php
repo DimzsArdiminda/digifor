@@ -9,7 +9,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('kasus', function (Blueprint $table) {
-            $table->string('status_kasus')
+            $table->enum('status_kasus', ['Pending', 'In Progress', 'Completed'])
                   ->default('Pending')
                   ->after('ringkasan_kasus');
         });

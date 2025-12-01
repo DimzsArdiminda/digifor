@@ -15,7 +15,7 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>ID</th>
+                {{-- <th>ID</th> --}}
                 <th>Korban</th>
                 <th>Jenis Kasus</th>
                 <th>Ringkasan Kasus</th>
@@ -27,7 +27,7 @@
         <tbody>
             @foreach ($kasus as $k)
             <tr>
-                <td>{{ $k->id }}</td>
+                {{-- <td>{{ $k->id }}</td> --}}
                 <td>{{ $k->korban->nama_lengkap ?? '-' }}</td>
                 <td>{{ $k->jenis_kasus }}</td>
                 <td>{{ $k->ringkasan_kasus }}</td>
