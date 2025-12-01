@@ -19,4 +19,3 @@ class DataKorban extends Model
         return $this->hasMany(Kasus::class, 'id_korban', 'id');
     }
 }
-

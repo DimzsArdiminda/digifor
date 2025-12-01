@@ -5,6 +5,7 @@ use Inertia\Inertia;
 use Laravel\Fortify\Features;
 use App\Http\Controllers\user\AlumniController;
 use App\Http\Controllers\KasusController;
+use App\Http\Controllers\TindakanForensikController;
 
 
 Route::get('/welcome', function () {
@@ -13,6 +14,11 @@ Route::get('/welcome', function () {
     ]);
 })->name('home');
 
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('dashboard', function () {
+        return Inertia::render('dashboard');
+    })->name('dashboard');
+});
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
         return Inertia::render('dashboard');
@@ -43,5 +49,7 @@ Route::prefix('/auth')->name('auth')->group(function(){
 });
 Route::resource('kasus', KasusController::class)->middleware('CheckMid');
 // Route::resource('kasus', KasusController::class)->middleware('checkmid');
+
+Route::resource('/tindakan', TindakanForensikController::class);
 
 include "api.php";
