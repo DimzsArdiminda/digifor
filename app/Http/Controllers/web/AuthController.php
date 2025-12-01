@@ -4,7 +4,7 @@ namespace App\Http\Controllers\web;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Laravel\Socialite\Socialite;
+use Laravel\Socialite\Facades\Socialite;
 use App\Models\DetailUser;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -30,42 +30,37 @@ class AuthController extends Controller
     {
         return Socialite::driver('google')->redirect();
     }
+    
     public function googleCallback()
-    {
-        $googleUser = Socialite::driver('google')->user();
+{
+    $googleUser = Socialite::driver('google')->user();
 
-        $role = $googleUser->email === 'kickardimas@gmail.com' ? 'admin' : 'user';
+    $role = $googleUser->email === 'eryzasatria@gmail.com' ? 'admin' : 'user';
 
-        $user = DetailUser::updateOrCreate(
-            ['email' => $googleUser->email],
-            [
-                'id' => Str::uuid(),
-                'nama' => $googleUser->name,
-                'email' => $googleUser->email,
-                'photo' => $googleUser->avatar,
-                'role' => $role,
-                'google_token' => $googleUser->token,
-                'google_refresh_token' => $googleUser->refreshToken,
-            ]
-        );
+    $user = DetailUser::updateOrCreate(
+        ['email' => $googleUser->email],
+        [
+            'id' => Str::uuid(),
+            'nama' => $googleUser->name,
+            'email' => $googleUser->email,
+            'photo' => $googleUser->avatar,
+            'role' => $role,
+            'google_token' => $googleUser->token,
+            'google_refresh_token' => $googleUser->refreshToken,
+        ]
+    );
 
-         // Hapus semua token sebelumnya
-        $user->tokens()->delete();
+    $user->tokens()->delete();
+    $token = $user->createToken('auth_token')->plainTextToken;
 
-        // Buat token baru
-        $token = $user->createToken('auth_token')->plainTextToken;
-        
-        // Regenerasi session ID untuk keamanan
-        session()->regenerate();
-        
-        // Loginkan user ke session Laravel
-        Auth::login($user);
-        
-        // Simpan token ke session jika ingin digunakan di blade atau route biasa
-        session(['auth_token' => $token]);
+    session()->regenerate();
+    Auth::login($user);
+    session(['auth_token' => $token]);
 
-        return redirect('/');
-    }
+    // setelah login → langsung ke index CRUD data_korban
+    return redirect()->route('data-korban.index');
+}
+
 
 
     // unused

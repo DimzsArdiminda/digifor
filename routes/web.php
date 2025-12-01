@@ -3,9 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
+use App\Http\Controllers\user\MainController;
 use App\Http\Controllers\user\AlumniController;
 use App\Http\Controllers\KasusController;
 use App\Http\Controllers\TindakanForensikController;
+use App\Http\Controllers\admin\MainController as AdminMainController;
+use App\Http\Controllers\admin\DataKorbanController;
+use App\Http\Controllers\web\AuthController;
+
 
 
 Route::get('/welcome', function () {
@@ -41,11 +46,19 @@ Route::prefix('alumni')->name('alumni.')->group(function () {
 // Admin Page
 Route::get('/admin', [App\Http\Controllers\admin\MainController::class, 'index'])->name('admin.index');
 
-// route auth 
-Route::prefix('/auth')->name('auth')->group(function(){
-    route::get('/login', function(){
+// ====== CRUD DATA KORBAN (tabel: data_korban) ======
+// Route::middleware('auth')->group(function () {
+//     Route::resource('data-korban', DataKorbanController::class);
+// });
+// SEMENTARA untuk test tanpa auth
+Route::resource('data-korban', DataKorbanController::class);
+
+
+// ====== AUTH (LOGIN BLADE) ======
+Route::prefix('auth')->name('auth.')->group(function () {
+    Route::get('/login', function () {
         return view('layouts.auth.signin');
-    });
+    })->name('login');
 });
 Route::resource('kasus', KasusController::class)->middleware('CheckMid');
 // Route::resource('kasus', KasusController::class)->middleware('checkmid');
