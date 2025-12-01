@@ -13,6 +13,14 @@ class DataKorban extends Model
     protected $keyType = 'string';
 
     protected $table = 'data_korban';
+    protected $fillable = [
+        'id',
+        'nama_lengkap',
+        'tanggal_lahir',
+        'jenis_kelamin',
+        'alamat',
+        'nomor_telepon'
+    ];
 
     public function kasus()
     {
