@@ -1,4 +1,6 @@
 @extends('layouts.master')
+@section('tindakan', 'active')
+
 
 @section('content')
 
@@ -23,7 +25,7 @@
         @foreach($data as $d)
         <tr>
             <td>{{ $loop->iteration }}</td>
-            <td>{{ $d->id_kasus }}</td>
+            <td>{{ $d->kasus->ringkasan_kasus }}</td>
             <td>{{ $d->tindakan_dilakuakan }}</td>
             <td>{{ $d->waktu_tindakan }}</td>
 

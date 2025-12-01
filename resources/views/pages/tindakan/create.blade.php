@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('tindakan', 'active')
 
 @section('content')
 <div class="container">

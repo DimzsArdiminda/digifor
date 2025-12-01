@@ -54,7 +54,7 @@
 					<li><a href="/home" class="@yield('home')">Home</a></li>
 					<li><a href="#" class="@yield('korban')">Data Korban</a></li>
 					<li><a href="/kasus" class="@yield('kasus')">Kasus</a></li>
-					<li><a href="#" class="@yield('tindakan')">Tindakan</a></li>
+					<li><a href="/tindakan" class="@yield('tindakan')">Tindakan</a></li>
 					<li>
 						<form action="{{ route('auth.logout') }}" method="POST" style="margin: 0;">
 							@csrf

@@ -1,4 +1,6 @@
 @extends('layouts.master')
+@section('tindakan', 'active')
+
 
 @section('content')
 
