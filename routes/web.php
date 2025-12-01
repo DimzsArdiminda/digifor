@@ -63,6 +63,7 @@ Route::prefix('auth')->name('auth.')->group(function () {
 Route::resource('kasus', KasusController::class)->middleware('CheckMid');
 // Route::resource('kasus', KasusController::class)->middleware('checkmid');
 
-Route::resource('/tindakan', TindakanForensikController::class);
+Route::resource('/tindakan', TindakanForensikController::class)->middleware('CheckMid');
+Route::resource('/data-korban', DataKorbanController::class);
 
 include "api.php";
