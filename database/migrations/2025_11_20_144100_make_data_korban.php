@@ -6,23 +6,21 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('data_korban', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->string('nama_lengkap');
-            $table->string('no_hp');
-            $table->string('deskripsi_kejadian');
-            $table->timestamps();
+            // PK sesuai ERD: id_korban (INT, auto increment)
+            $table->increments('id_korban');
+
+            $table->string('nama_korban');        // VARCHAR - Nama Korban
+            $table->string('kontak_korban');      // VARCHAR - Nomor / kontak
+            $table->string('alamat_korban');      // VARCHAR - alamat domisili / lokasi kejadian
+            $table->text('deskripsi_kejadian');   // TEXT - ringkasan kejadian
+
+            $table->timestamps();                 // created_at & updated_at
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('data_korban');
