@@ -16,7 +16,7 @@
           <div class="signin-signup">
             <div class="form sign-in-form">
               <h2 class="title">Join us</h2>
-              <a href="{{ route('auth.google.redirect') }}" class="input-field" style="text-decoration: none">
+              <a href="{{ route('auth.google-redirect') }}" class="input-field" style="text-decoration: none">
                 <i class="fab fa-google"></i>
                 <p>Google Account</p>
               </a>

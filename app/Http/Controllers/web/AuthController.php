@@ -58,7 +58,8 @@ class AuthController extends Controller
     session(['auth_token' => $token]);
 
     // setelah login → langsung ke index CRUD data_korban
-    return redirect()->route('data-korban.index');
+    // return redirect()->route('data-korban.index');
+    return redirect('/');
 }
 
 
