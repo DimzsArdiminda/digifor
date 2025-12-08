@@ -110,7 +110,7 @@
 			</div>
 		</div> --}}
 
-		<div class="container footer-top py-5 ">
+		{{-- <div class="container footer-top py-5 ">
 			<div class="row gy-4 bg-teal-500">
 				<div class="col-lg-4 col-md-6 footer-about">
 					<a href="{{ url('/') }}" class="d-flex align-items-center">
@@ -154,11 +154,11 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 
 		<div class="container text-center py-3">
-			<p>© <strong class="sitename">EduCarrer Tracker</strong>. All Rights Reserved.</p>
-			<p class="small">Designed by <a href="https://bootstrapmade.com/">Kelompok </a>. Education <a href="https://themewagon.com">Information</a></p>
+			<p>© <strong class="sitename">FCMS</strong>. All Rights Reserved.</p>
+			<p class="small">Designed by <a href="https://bootstrapmade.com/">Kelompok X</a>. Digital <a href="https://themewagon.com">Forensik</a></p>
 		</div>
 	</footer>
 	<!-- End Footer -->
