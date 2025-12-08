@@ -55,7 +55,7 @@ class DataKorbanController extends Controller
     {
         $korban = DataKorban::findOrFail($id_korban);
 
-        // view: resources/views/pages/data_korban/edit.blade.php
+        // ??view: resources/views/pages/data_korban/edit.blade.php
         return view('pages.data_korban.edit', compact('korban'));
     }
 
