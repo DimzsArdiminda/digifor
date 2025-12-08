@@ -19,7 +19,9 @@ class DataKorban extends Model
         'tanggal_lahir',
         'jenis_kelamin',
         'alamat',
-        'nomor_telepon'
+        'nomor_telepon',
+        'no_hp',
+        'deskripsi_kejadian'
     ];
 
     public function kasus()

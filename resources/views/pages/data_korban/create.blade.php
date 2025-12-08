@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('title', 'Tambah Data Korban')
+@section('korban', 'active')
 
 @section('content')
 <div class="container mt-4">
@@ -20,19 +21,15 @@
         @csrf
 
         <div class="mb-3">
-            <label for="nama_korban" class="form-label">Nama Korban</label>
-            <input type="text" name="nama_korban" id="nama_korban" class="form-control" value="{{ old('nama_korban') }}" required>
+            <label for="nama_lengkap" class="form-label">Nama Korban</label>
+            <input type="text" name="nama_lengkap" id="nama_lengkap" class="form-control" value="{{ old('nama_lengkap') }}" required>
         </div>
 
         <div class="mb-3">
-            <label for="kontak_korban" class="form-label">Kontak Korban</label>
-            <input type="text" name="kontak_korban" id="kontak_korban" class="form-control" value="{{ old('kontak_korban') }}" required>
+            <label for="no_hp" class="form-label">Kontak Korban</label>
+            <input type="text" name="no_hp" id="no_hp" class="form-control" value="{{ old('no_hp') }}" required>
         </div>
-
-        <div class="mb-3">
-            <label for="alamat_korban" class="form-label">Alamat Korban</label>
-            <input type="text" name="alamat_korban" id="alamat_korban" class="form-control" value="{{ old('alamat_korban') }}" required>
-        </div>
+        {{-- <input type="hidden" name="id" id="id" class="form-control" value="{{ Illuminate\Support\Str::uuid() }}" readonly> --}}
 
         <div class="mb-3">
             <label for="deskripsi_kejadian" class="form-label">Deskripsi Kejadian</label>

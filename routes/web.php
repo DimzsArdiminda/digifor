@@ -64,6 +64,6 @@ Route::resource('kasus', KasusController::class)->middleware('CheckMid');
 // Route::resource('kasus', KasusController::class)->middleware('checkmid');
 
 Route::resource('/tindakan', TindakanForensikController::class)->middleware('CheckMid');
-Route::resource('/data-korban', DataKorbanController::class);
+Route::resource('/data-korban', DataKorbanController::class)->middleware('CheckMid');
 
 include "api.php";

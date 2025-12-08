@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\DataKorban;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class DataKorbanController extends Controller
 {
@@ -25,18 +26,17 @@ class DataKorbanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama_korban'        => 'required|string|max:255',
-            'kontak_korban'      => 'required|string|max:255',
-            // 'alamat_korban'      => 'required|string|max:255',
+            'nama_lengkap'        => 'required|string|max:255',
+            'no_hp'      => 'required|max:255',
             'deskripsi_kejadian' => 'required|string',
         ]);
-
-        DataKorban::create($request->only([
-            'nama_korban',
-            'kontak_korban',
-            // 'alamat_korban',
-            'deskripsi_kejadian',
-        ]));
+        
+        $model = DataKorban::create([
+            'id' => Str::uuid(),
+            'nama_lengkap'        => $request->input('nama_lengkap'),
+            'no_hp'      => $request->input('no_hp'),
+            'deskripsi_kejadian' => $request->input('deskripsi_kejadian'),
+        ]);
 
         return redirect()
             ->route('data-korban.index')
