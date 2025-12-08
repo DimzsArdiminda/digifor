@@ -16,23 +16,19 @@
         </div>
     @endif
 
-    <form action="{{ route('data-korban.update', $korban->id_korban) }}" method="POST">
+    <form action="{{ route('data-korban.update', $korban->id) }}" method="POST">
         @csrf
         @method('PUT')
 
         <div class="mb-3">
-            <label for="nama_korban" class="form-label">Nama Korban</label>
-            <input type="text" name="nama_korban" id="nama_korban" class="form-control" value="{{ old('nama_korban', $korban->nama_korban) }}" required>
+            <label for="nama_lengkap" class="form-label">Nama Korban</label>
+            <input type="text" name="nama_lengkap" id="nama_lengkap" class="form-control" value="{{ old('nama_lengkap', $korban->nama_lengkap) }}" required>
         </div>
 
         <div class="mb-3">
-            <label for="kontak_korban" class="form-label">Kontak Korban</label>
-            <input type="text" name="kontak_korban" id="kontak_korban" class="form-control" value="{{ old('kontak_korban', $korban->kontak_korban) }}" required>
-        </div>
-
-        <div class="mb-3">
-            <label for="alamat_korban" class="form-label">Alamat Korban</label>
-            <input type="text" name="alamat_korban" id="alamat_korban" class="form-control" value="{{ old('alamat_korban', $korban->alamat_korban) }}" required>
+            <label for="no_hp" class="form-label">Kontak Korban</label>
+            <input type="text" name="no_hp" id="no_hp" class="form-control" value="{{ old('no_hp', $korban->no_hp) }}" required>
+            <input type="hidden" name="id_korban" id="id_korban" class="form-control" value="{{ $korban->id }}" required>
         </div>
 
         <div class="mb-3">

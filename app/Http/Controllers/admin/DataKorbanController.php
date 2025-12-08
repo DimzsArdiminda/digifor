@@ -27,14 +27,14 @@ class DataKorbanController extends Controller
         $request->validate([
             'nama_korban'        => 'required|string|max:255',
             'kontak_korban'      => 'required|string|max:255',
-            'alamat_korban'      => 'required|string|max:255',
+            // 'alamat_korban'      => 'required|string|max:255',
             'deskripsi_kejadian' => 'required|string',
         ]);
 
         DataKorban::create($request->only([
             'nama_korban',
             'kontak_korban',
-            'alamat_korban',
+            // 'alamat_korban',
             'deskripsi_kejadian',
         ]));
 
@@ -59,21 +59,22 @@ class DataKorbanController extends Controller
         return view('pages.data_korban.edit', compact('korban'));
     }
 
-    public function update(Request $request, string $id_korban)
+    public function update(Request $request)
     {
         $request->validate([
-            'nama_korban'        => 'required|string|max:255',
-            'kontak_korban'      => 'required|string|max:255',
-            'alamat_korban'      => 'required|string|max:255',
+            'nama_lengkap'        => 'required|string|max:255',
+            'no_hp'      => 'required|string|max:255',
+            // 'alamat_korban'      => 'required|string|max:255',
             'deskripsi_kejadian' => 'required|string',
         ]);
-
+        $id_korban = $request->input('id_korban');
         $korban = DataKorban::findOrFail($id_korban);
+        // \dd($korban);
 
         $korban->update($request->only([
-            'nama_korban',
-            'kontak_korban',
-            'alamat_korban',
+            'nama_lengkap',
+            'no_hp',
+            // 'alamat_korban',
             'deskripsi_kejadian',
         ]));
 
