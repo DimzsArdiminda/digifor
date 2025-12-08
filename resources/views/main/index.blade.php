@@ -4,45 +4,45 @@
 @section('content')
 
 {{-- HOME --}}
-<section id="home" class="hero-section py-5 bg-light">
+<section id="home" class="hero-section py-4 bg-light">
     <div class="container">
         <div class="row align-items-center">
             <!-- Left Content -->
             <div class="col-md-6" data-aos="zoom-in-right">
                 <div class="mb-3 d-flex align-items-center">
                     <span class="badge bg-primary-subtle text-primary px-3 py-2">
-                        Hi, {{ Auth::user()->nama ?? 'Warga sipil sekalian ' }} <br><i class="bi bi-gear me-2"></i> EduCareer Tracker
+                        Hi, {{ Auth::user()->nama ?? 'Warga sipil sekalian ' }} <br><i class="bi bi-gear me-2"></i> FCMS
                     </span>
                 </div>
                 <h1 class="fw-bold display-5 mb-3">
-                    Sistem Tracer Study Alumni<br>
-                    <span class="text-primary">Universitas Negeri Malang</span>
+                    Forensic Case Management System<br>
+                    {{-- <span class="text-primary">Universitas Negeri Malang</span> --}}
                 </h1>
                 <p class="text-muted mb-4">
-                    Platform terintegrasi untuk tracking status pekerjaan, evaluasi kurikulum, dan analisis data alumni. Mendukung akreditasi dengan laporan komprehensif dan visualisasi data real-time.
+                     Platform Berbasis Web untuk Dokumentasi Kasus dan Data Korban
                 </p>
-                <div class="d-flex align-items-center gap-3 mt-4">
+                {{-- <div class="d-flex align-items-center gap-3 mt-4">
                     <a href="#" class="btn btn-primary btn-get-started px-4 py-2">
                         Get Started
                     </a>
                     <a href="https://youtu.be/pQtyOxZzzX0" class="d-flex align-items-center text-dark play-btn">
                         <i class="bi bi-play-circle fs-4 me-2"></i> Play Video
                     </a>
-                </div>
+                </div> --}}
 
 
                 <div class="d-flex align-items-center mt-4 gap-4">
                     <div class="stat-item">
-                        <h3 class="fw-bold text-primary mb-0">1,234+</h3>
-                        <p class="text-muted small mb-0">Alumni Terdaftar</p>
+                        <h3 class="fw-bold text-primary mb-0">125</h3>
+                        <p class="text-muted small mb-0">Kasus Selesai</p>
                     </div>
                     <div class="stat-item">
-                        <h3 class="fw-bold text-primary mb-0">85%</h3>
-                        <p class="text-muted small mb-0">Tingkat Penyerapan</p>
+                        <h3 class="fw-bold text-primary mb-0">50+</h3>
+                        <p class="text-muted small mb-0">Rating</p>
                     </div>
                     <div class="stat-item">
-                        <h3 class="fw-bold text-primary mb-0">3.2</h3>
-                        <p class="text-muted small mb-0">Bulan Tunggu Kerja</p>
+                        <h3 class="fw-bold text-primary mb-0">80</h3>
+                        <p class="text-muted small mb-0">Kasus dalam penanganan</p>
                     </div>
                 </div>
             </div>
@@ -58,39 +58,39 @@
     <section class="py-5" id="statistics">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
-        <h2 class="fw-bold">Campus Achievements</h2>
+        <h2 class="fw-bold">Achievements</h2>
         <p class="text-muted">Our continuous journey of excellence and innovation</p>
         </div>
 
         <div class="row text-center justify-content-center">
-        <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="p-4 shadow-sm rounded bg-white stat-box">
-            <i class="bi bi-trophy fs-1 text-primary mb-2"></i>
-            <h3 class="fw-bold counter" data-target="15">0</h3>
-            <p class="text-muted mb-0">National Awards</p>
+            <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="p-4 shadow-sm rounded bg-white stat-box">
+                <i class="bi bi-check-circle fs-1 text-primary mb-2"></i>
+                <h3 class="fw-bold counter" data-target="125">0</h3>
+                <p class="text-muted mb-0">Kasus Selesai</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="p-4 shadow-sm rounded bg-white stat-box">
-            <i class="bi bi-mortarboard fs-1 text-primary mb-2"></i>
-            <h3 class="fw-bold counter" data-target="6500">0</h3>
-            <p class="text-muted mb-0">Graduated Students</p>
+            <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="p-4 shadow-sm rounded bg-white stat-box">
+                <i class="bi bi-star fs-1 text-primary mb-2"></i>
+                <h3 class="fw-bold counter" data-target="50">0</h3>
+                <p class="text-muted mb-0">Rating</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="p-4 shadow-sm rounded bg-white stat-box">
-            <i class="bi bi-journal-check fs-1 text-primary mb-2"></i>
-            <h3 class="fw-bold counter" data-target="120">0</h3>
-            <p class="text-muted mb-0">Active Research Projects</p>
+            <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                <div class="p-4 shadow-sm rounded bg-white stat-box">
+                <i class="bi bi-hourglass-split fs-1 text-primary mb-2"></i>
+                <h3 class="fw-bold counter" data-target="80">0</h3>
+                <p class="text-muted mb-0">Kasus dalam Penanganan</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
-            <div class="p-4 shadow-sm rounded bg-white stat-box">
-            <i class="bi bi-people fs-1 text-primary mb-2"></i>
-            <h3 class="fw-bold counter" data-target="300">0</h3>
-            <p class="text-muted mb-0">Dedicated Lecturers</p>
+            <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                <div class="p-4 shadow-sm rounded bg-white stat-box">
+                <i class="bi bi-file-earmark-text fs-1 text-primary mb-2"></i>
+                <h3 class="fw-bold counter" data-target="255">0</h3>
+                <p class="text-muted mb-0">Total Kasus Forensik</p>
+                </div>
             </div>
-        </div>
         </div>
     </div>
     </section>
@@ -103,14 +103,12 @@
             <!-- Text content -->
             <div class="col-md-6" data-aos="fade-right">
                 <div class="content-box p-4 shadow-sm bg-light rounded-3">
-                    <span class="text-uppercase text-primary small fw-bold">EduCareer Tracker</span>
+                    <span class="text-uppercase text-primary small fw-bold">FCMS</span>
                     <h3 class="fw-bold mt-2 mb-3 text-dark">
-                        Solusi Terpadu untuk Monitoring dan Evaluasi Alumni
+                         Platform Berbasis Web untuk Dokumentasi Kasus dan Data Korban
                     </h3>
                     <p class="text-muted mb-4">
-                        EduCareer Tracking hadir sebagai platform komprehensif yang memudahkan institusi dalam melacak perkembangan karir alumni. 
-                        Sistem berbasis data dengan fitur tracking real-time, pelaporan otomatis, dan dashboard interaktif, kami memudahkan 
-                        proses pengumpulan data tracer study yang akurat dan mendukung peningkatan kualitas pendidikan.
+                        Forensic Case Management System (FCMS) adalah sebuah platform berbasis web yang dirancang khusus untuk membantu dalam dokumentasi dan manajemen kasus forensik serta data korban. Sistem ini bertujuan untuk mempermudah proses pencatatan, pelacakan, dan analisis informasi terkait kasus forensik, sehingga dapat meningkatkan efisiensi dan akurasi dalam penanganan kasus.
                     </p>
                     <a href="#" class="btn btn-primary btn-read-more px-4 py-2">
                         Read More <i class="bi bi-arrow-right ms-2"></i>
@@ -130,7 +128,7 @@
 
 {{-- CONTACT --}}
 <!-- Contact Section -->
-<section class="py-5 " id="contact">
+{{-- <section class="py-5 " id="contact">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
         <h2 class="fw-bold">CONTACT</h2>
@@ -199,7 +197,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 </section>

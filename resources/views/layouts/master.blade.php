@@ -44,14 +44,14 @@
 		<div class="container-fluid container-xl position-relative d-flex align-items-center">
 
 			<a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto">
-				<img src="{{ asset('frontend/image/logo-ika.webp') }}" alt="FlexStart Logo" style="height:40px;">
-				<h1 class="sitename ms-2"></h1>
+				{{-- <img src="{{ asset('frontend/image/logo-ika.webp') }}" alt="FlexStart Logo" style="height:40px;"> --}}
+				<h1 class="sitename ms-2">FCMS</h1>
 			</a>
 
 			@if (Auth::check())
 			<nav id="navmenu" class="navmenu">
 				<ul>
-					<li><a href="/home" class="@yield('home')">Home</a></li>
+					<li><a href="/" class="@yield('home')">Home</a></li>
 					<li><a href="/data-korban" class="@yield('korban')">Data Korban</a></li>
 					<li><a href="/kasus" class="@yield('kasus')">Kasus</a></li>
 					<li><a href="/tindakan" class="@yield('tindakan')">Tindakan</a></li>
@@ -68,9 +68,6 @@
 			<nav id="navmenu" class="navmenu">
 				<ul>
 					<li><a href="#home" class="active">Home</a></li>
-					<li><a href="#statistics">Statistik Kasus</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
 					<li><a href="{{ url('/auth/login') }}">Login</a></li>
 				</ul>
 				<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
