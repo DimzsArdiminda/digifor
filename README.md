@@ -1,4 +1,4 @@
-# educational-informatic
+# Digital Forensik
 
 <!-- PROJECT LOGO -->
 <br />
