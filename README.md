@@ -1,12 +1,20 @@
-# educational-informatic
+# Digital Forensik
 
 <!-- PROJECT LOGO -->
+<br />
+1. DIMAS ARDIMINDA EDIA PUTRA (220535608555) <br />
+2. MELANI PUTRI DEWINTA (220533608063)  <br />
+3. NADIA SALMA NAFISAH (220533604762) <br />
+4. NUR AFNI (220533611570) <br />
+5. ERYZA SATRIA PRIMADITA (220535608800) <br />
+
 <br />
 Feature:
 - Home
 - Data Korban <br>
 - Kasus <br>
 - Tindakan <br>
+
 
 ### Built With
 
