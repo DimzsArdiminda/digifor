@@ -47,7 +47,7 @@ class DigiforSeeder extends Seeder
             'id_korban' => $idUuid1,
             'jenis_kasus' => 'Pencurian Data',
             'ringkasan_kasus' => 'Korban mengalami pencurian data pribadi melalui email phishing.',
-            'status' => 'baru',
+            'status_kasus' => 'Pending',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -56,7 +56,7 @@ class DigiforSeeder extends Seeder
             'id_korban' => $idUuid2,
             'jenis_kasus' => 'Pencurian Kendaraan', 
             'ringkasan_kasus' => 'Korban mengalami pencurian mobil melalui peretasan sistem keamanan.',
-            'status' => 'baru',
+            'status_kasus' => 'In Progress',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -65,7 +65,7 @@ class DigiforSeeder extends Seeder
             'id_korban' => $idUuid3,
             'jenis_kasus' => 'Penipuan Online',
             'ringkasan_kasus' => 'Korban mengalami penipuan online melalui situs palsu.',
-            'status' => 'baru',
+            'status_kasus' => 'Completed',
             'created_at' => now(),
             'updated_at' => now(),
         ]);

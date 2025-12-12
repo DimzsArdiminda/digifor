@@ -16,12 +16,8 @@ class DataKorban extends Model
     protected $fillable = [
         'id',
         'nama_lengkap',
-        'tanggal_lahir',
-        'jenis_kelamin',
-        'alamat',
-        'nomor_telepon',
         'no_hp',
-        'deskripsi_kejadian'
+        'deskripsi_kejadian',
     ];
 
     public function kasus()
