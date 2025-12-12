@@ -33,15 +33,15 @@
 
                 <div class="d-flex align-items-center mt-4 gap-4">
                     <div class="stat-item">
-                        <h3 class="fw-bold text-primary mb-0">125</h3>
+                        <h3 class="fw-bold text-primary mb-0">{{ \App\Models\Kasus::where('status_kasus', 'Completed')->count() }}</h3>
                         <p class="text-muted small mb-0">Kasus Selesai</p>
                     </div>
                     <div class="stat-item">
-                        <h3 class="fw-bold text-primary mb-0">50+</h3>
-                        <p class="text-muted small mb-0">Rating</p>
+                        <h3 class="fw-bold text-primary mb-0">{{ \App\Models\Kasus::count() > 0 ? number_format((\App\Models\Kasus::where('status_kasus', 'Completed')->count() / \App\Models\Kasus::count()) * 100, 1) : '0' }}%</h3>
+                        <p class="text-muted small mb-0">Presentase kasus selesai</p>
                     </div>
                     <div class="stat-item">
-                        <h3 class="fw-bold text-primary mb-0">80</h3>
+                        <h3 class="fw-bold text-primary mb-0">{{ \App\Models\Kasus::where('status_kasus', 'In Progress')->count() }}</h3>
                         <p class="text-muted small mb-0">Kasus dalam penanganan</p>
                     </div>
                 </div>
@@ -63,35 +63,35 @@
         </div>
 
         <div class="row text-center justify-content-center">
-            <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
-                <div class="p-4 shadow-sm rounded bg-white stat-box">
-                <i class="bi bi-check-circle fs-1 text-primary mb-2"></i>
-                <h3 class="fw-bold counter" data-target="125">0</h3>
-                <p class="text-muted mb-0">Kasus Selesai</p>
+                    <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="p-4 shadow-sm rounded bg-white stat-box">
+                        <i class="bi bi-check-circle fs-1 text-primary mb-2"></i>
+                        <h3 class="fw-bold counter" data-target="{{ \App\Models\Kasus::where('status_kasus', 'Completed')->count() }}">0</h3>
+                        <p class="text-muted mb-0">Kasus Selesai</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="p-4 shadow-sm rounded bg-white stat-box">
+                        <i class="bi bi-star fs-1 text-primary mb-2"></i>
+                        <h3 class="fw-bold counter" data-target="{{ \App\Models\Kasus::count() > 0 ? number_format((\App\Models\Kasus::where('status_kasus', 'Completed')->count() / \App\Models\Kasus::count()) * 100, 0) : '0' }}">0</h3>
+                        <p class="text-muted mb-0">Rating</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="p-4 shadow-sm rounded bg-white stat-box">
+                        <i class="bi bi-hourglass-split fs-1 text-primary mb-2"></i>
+                        <h3 class="fw-bold counter" data-target="{{ \App\Models\Kasus::where('status_kasus', 'In Progress')->count() }}">0</h3>
+                        <p class="text-muted mb-0">Kasus dalam Penanganan</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="p-4 shadow-sm rounded bg-white stat-box">
+                        <i class="bi bi-file-earmark-text fs-1 text-primary mb-2"></i>
+                        <h3 class="fw-bold counter" data-target="{{ \App\Models\Kasus::count() }}">0</h3>
+                        <p class="text-muted mb-0">Total Kasus Forensik</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="p-4 shadow-sm rounded bg-white stat-box">
-                <i class="bi bi-star fs-1 text-primary mb-2"></i>
-                <h3 class="fw-bold counter" data-target="50">0</h3>
-                <p class="text-muted mb-0">Rating</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
-                <div class="p-4 shadow-sm rounded bg-white stat-box">
-                <i class="bi bi-hourglass-split fs-1 text-primary mb-2"></i>
-                <h3 class="fw-bold counter" data-target="80">0</h3>
-                <p class="text-muted mb-0">Kasus dalam Penanganan</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
-                <div class="p-4 shadow-sm rounded bg-white stat-box">
-                <i class="bi bi-file-earmark-text fs-1 text-primary mb-2"></i>
-                <h3 class="fw-bold counter" data-target="255">0</h3>
-                <p class="text-muted mb-0">Total Kasus Forensik</p>
-                </div>
-            </div>
-        </div>
     </div>
     </section>
 

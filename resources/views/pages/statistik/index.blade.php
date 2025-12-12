@@ -92,7 +92,7 @@
                     <h5 class="mb-0"><i class="bi bi-graph-up text-info"></i> Trend Kasus & Tindakan (6 Bulan Terakhir)</h5>
                 </div>
                 <div class="card-body">
-                    <canvas id="trendChart" height="100"></canvas>
+                    <canvas id="trendChart" height="350"></canvas>
                 </div>
             </div>
         </div>
