@@ -11,7 +11,7 @@
             <div class="col-md-6" data-aos="zoom-in-right">
                 <div class="mb-3 d-flex align-items-center">
                     <span class="badge bg-primary-subtle text-primary px-3 py-2">
-                        Hi, {{ Auth::user()->nama ?? 'Warga sipil sekalian ' }} <br><i class="bi bi-gear me-2"></i> FCMS
+                        Hi, {{ Auth::user()->nama ?? 'Welcome to ' }} <br><i class="bi bi-gear me-2"></i> FCMS
                     </span>
                 </div>
                 <h1 class="fw-bold display-5 mb-3">

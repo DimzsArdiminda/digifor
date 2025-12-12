@@ -55,6 +55,7 @@
 					<li><a href="/data-korban" class="@yield('korban')">Data Korban</a></li>
 					<li><a href="/kasus" class="@yield('kasus')">Kasus</a></li>
 					<li><a href="/tindakan" class="@yield('tindakan')">Tindakan</a></li>
+					<li><a href="/statistik" class="@yield('statistik')">Statitstik</a></li>
 					<li>
 						<form action="{{ route('auth.logout') }}" method="POST" style="margin: 0;">
 							@csrf
