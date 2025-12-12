@@ -7,6 +7,7 @@ use App\Http\Controllers\user\MainController;
 use App\Http\Controllers\user\AlumniController;
 use App\Http\Controllers\KasusController;
 use App\Http\Controllers\TindakanForensikController;
+use App\Http\Controllers\StatistikController;
 use App\Http\Controllers\admin\MainController as AdminMainController;
 use App\Http\Controllers\admin\DataKorbanController;
 use App\Http\Controllers\web\AuthController;
@@ -65,5 +66,6 @@ Route::resource('kasus', KasusController::class)->middleware('CheckMid');
 
 Route::resource('/tindakan', TindakanForensikController::class)->middleware('CheckMid');
 Route::resource('/data-korban', DataKorbanController::class)->middleware('CheckMid');
+Route::get('/statistik', [StatistikController::class, 'index'])->name('statistik.index')->middleware('CheckMid');
 
 include "api.php";

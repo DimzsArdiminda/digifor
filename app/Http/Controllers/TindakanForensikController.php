@@ -23,6 +23,7 @@ class TindakanForensikController extends Controller
 
     public function store(Request $request)
     {
+        // \dd($request->all());
         $request->validate([
             'id_kasus' => 'required',
             'tindakan_dilakuakan' => 'required',
@@ -32,7 +33,7 @@ class TindakanForensikController extends Controller
         TindakanForensik::create([
             'id' => Str::uuid(),  // UUID
             'id_kasus' => $request->id_kasus,
-            'tindakan_dilakuakan' => $request->tindakan_dilakukan,
+            'tindakan_dilakuakan' => $request->tindakan_dilakuakan,
             'waktu_tindakan' => $request->waktu_tindakan,
         ]);
 

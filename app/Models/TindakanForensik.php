@@ -8,11 +8,7 @@ class TindakanForensik extends Model
 {
     protected $table = 'tindakan_forensik';
 
-    protected $fillable = [
-        'id_kasus',
-        'tindakan_dilakuakan',
-        'waktu_tindakan'
-    ];
+    protected $guarded = [];
 
     // karena id adalah UUID
     public $incrementing = false;
