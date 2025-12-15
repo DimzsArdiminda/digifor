@@ -34,8 +34,8 @@
             <label>Status Kasus</label>
             <select name="status_kasus" class="form-control">
                 <option value="Pending">Pending</option>
-                <option value="Proses">Proses</option>
-                <option value="Selesai">Selesai</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
             </select>
         </div>
 
